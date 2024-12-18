@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Reddit Chat Anonymizer",
+    "version": "1.0",
+    "description": "Anonymizes user avatars in timeline events",
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*chat.reddit.com*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "permissions": [
+      "activeTab"
+    ]
+  }
